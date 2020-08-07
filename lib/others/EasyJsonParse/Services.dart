@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 import 'User.dart';
 
 class Services {
-  static const String url = 'http://10.0.2.2:4100/user/get-all';
+  static const String url = 'https://inbianam.herokuapp.com/user/get-all';
 
   static Future<List<User>> getUsers() async {
     try {
@@ -20,7 +20,7 @@ class Services {
 
   static Future<User> createUser(String name, String lastname, String document,
       String email, String password) async {
-    final String url = "http://10.0.2.2:4100/auth/signup";
+    final String url = "https://inbianam.herokuapp.com/auth/signup";
 
     final response = await http.post(url, body: {
       "name": name,
