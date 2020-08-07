@@ -18,7 +18,7 @@ class Services {
     }
   }
 
-  Future<List<User>> createUser(String name, String lastname, String document,
+  static Future<User> createUser(String name, String lastname, String document,
       String email, String password) async {
     final String url = "http://10.0.2.2:4100/auth/signup";
 
@@ -42,7 +42,7 @@ class Services {
     if (response.statusCode == 201) {
       final String responseString = response.body;
 
-      return userFromJson(responseString);
+      return userModelFromJson(responseString);
     } else {
       return null;
     }

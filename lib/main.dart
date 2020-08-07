@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'others/EasyJsonParse/JsonParceDemo.dart';
+import 'others/EasyJsonParse/Signup.dart';
 
 void main() {
   runApp(HomeApp());
@@ -13,7 +14,6 @@ class HomeApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: "Poppins",
-          primarySwatch: Colors.blue,
         ),
         home: JsonParseDemo());
   }

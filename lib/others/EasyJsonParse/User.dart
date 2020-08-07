@@ -6,6 +6,10 @@ List<User> userFromJson(String str) =>
 String userToJson(List<User> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
+User userModelFromJson(String str) => User.fromJson(json.decode(str));
+
+String userModelToJson(User data) => json.encode(data.toJson());
+
 class User {
   User({
     this.id,
